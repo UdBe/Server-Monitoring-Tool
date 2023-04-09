@@ -55,7 +55,7 @@ class _FirstRowState extends State<FirstRow> {
                       Column(
                         children: [
                           Text(
-                            " 69%        ",
+                            " 72%        ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.w300),
@@ -76,7 +76,7 @@ class _FirstRowState extends State<FirstRow> {
                               maximum: 100,
                               pointers: [
                                 NeedlePointer(
-                                  value: 69,
+                                  value: 72,
                                 )
                               ],
                             ),

@@ -1,9 +1,26 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
-import 'package:hackeclipse/dashboard/dashboard_main.dart';
+import 'package:hackeclipse/API/ramData.dart';
+import 'package:hackeclipse/API/request.dart';
 import 'package:hackeclipse/pallete.dart';
 
-class GradientButton extends StatelessWidget {
+import '../dashboard/dashboard_main.dart';
+
+class GradientButton extends StatefulWidget {
   const GradientButton({Key? key}) : super(key: key);
+
+  @override
+  State<GradientButton> createState() => _GradientButtonState();
+}
+
+class _GradientButtonState extends State<GradientButton> {
+  late Future<ramData> ramdata;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +38,10 @@ class GradientButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(7),
       ),
       child: ElevatedButton(
-        onPressed: () {
+        onPressed: () async {
+          // List list = await fetchramDatas();
+          // print("object!!!!");
+          // print(list);
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => Dashboard()));
         },
